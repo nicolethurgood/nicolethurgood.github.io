@@ -1,0 +1,888 @@
+
+
+
+
+<!doctype html>
+<html lang="en_US">
+<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>(16) Dashboard - CampusGroups</title>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1,requiresActiveX=true">
+    
+    <meta name="apple-itunes-app" content="app-id=566688504, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="Description" content="Group management system used at RIT (Rochester Institute of Technology) - Powered by CampusGroups.">
+    
+    <!-- Presentation -->
+    
+    <link rel="icon" type="images/x-icon" href="/upload/rit/2017/image_upload_34747_20170612_132016_612164239_crop.png?ts=2">
+    <link rel="shortcut icon" type="images/x-icon" href="/upload/rit/2017/image_upload_34747_20170612_132016_612164239_crop.png?ts=2">
+
+	<link href="/css/widgets.css" rel="stylesheet" type="text/css">
+	<link href="/css/content.css" rel="stylesheet" type="text/css">
+
+	
+
+
+	<link href="/css/main.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="/css/superfish.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="/js/meanmenu/meanmenu.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="/css/responsive.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/css/add_people_popup.css" rel="stylesheet" type="text/css">
+    <link href="/js/jquery/flora.datepicker.css" rel="stylesheet" type="text/css">
+    <link href="/js/jquery/jquery.autocomplete.css" rel="stylesheet" type="text/css">
+    <link href="/js/jquery/jquery.tooltip.css" rel="stylesheet" type="text/css">
+    <link href="/js/thickbox/thickbox.css" rel="stylesheet" type="text/css">
+	
+
+    <!-- If not a web site -->
+    
+
+	<!--[if IE]>
+		<link href="/css/ie.css" rel="stylesheet" type="text/css" media="screen">
+	<![endif]-->
+
+    
+	<style>
+		#topbar {background:#f36E21}
+		#header .nav > li:hover, #header .nav > li > a:focus, .dd_account > .active, .nav > .active, .nav > li.active_appli, .big_button:hover, .big_button:focus {background-color:#ffffff !important}
+		.big_button, .nav > li {background-color: #f36E21}
+		#topbar .nav > li:hover .arrow_down, #topbar .nav > li.active .arrow_down {border-color: #f36E21}
+		body[id=""] .meanmenu-reveal, .mean-container#menu_manage .home {background:#f36E21 !important}
+		
+		#header {height: 124px}
+		
+		.darkBgColor {background:#f36E21!important}
+	</style>
+
+  <link rel="stylesheet" href="/bower_components/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="/css/temp-header.css">
+
+  
+      <style>
+          #header { height: 100px !important; }
+      </style>
+  
+
+
+    <!-- JScripts -->
+
+    <script type="text/javascript">var strUrlRewrite = 1;</script>
+    <script type="text/javascript">function $$(strId) { return document.getElementById(strId); }</script>
+	<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+	
+		<script type="text/javascript">$.ajaxSetup({cache:true})</script>
+	
+	<script type="text/javascript" src="/js/jquery-migrate-1.2.1.js"></script>
+	<script type="text/javascript" src="/js/jquery/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="/js/superfish.js"></script>
+	<script type="text/javascript" src="/js/meanmenu/jquery.meanmenu.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
+	<script>
+		
+			jQuery(document).ready(function () {jQuery('#manage_nav nav').meanmenu();});
+		
+	</script>
+
+	<!--[if lt IE 9]>
+	  <script type="text/javascript" src="/js/selectivizr-min.js"></script>
+	<![endif]-->
+
+	
+    <script src="/js/thickbox/thickbox.js" type="text/javascript"></script>
+
+	
+	<script>
+	
+	</script>
+	
+	<!-- history -->
+	<script>
+	if (window.location.hash != '') {
+		window.location.href = window.location.hash.replace('#main=','');
+	}
+	</script>
+    
+    <script type="text/javascript" src="/js/jquery/jquery.history.js"></script>
+    
+    <script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery.history.init(pageload);
+	});
+	function pageload(hash) {
+		if(hash) {
+			var a = hash;
+            
+
+				if (document.getElementById(a.substring(0,a.indexOf('='))) && a.substring(a.indexOf('=')+1) != '')
+				{
+					confirmMessage(this,'');
+					//document.getElementById('main').style.display = 'none';
+					//document.getElementById('main').innerHTML = '<div style="text-align:center; padding-top:30px"><span id="loaderActivity" class="loader"><img src="/images/loader-big.gif"/><br/>Loading Activity</span></div>';
+					if (a.indexOf('?ax=1') > 0 || a.indexOf('&ax=1') > 0)
+						{
+						getContentOver(a.substring(0,a.indexOf('=')),a.substring(a.indexOf('=')+1) + '&ts=911134539');
+					}
+					else
+					{
+					if (a.indexOf('?') > 0)
+						{
+						getContentOver(a.substring(0,a.indexOf('=')),a.substring(a.indexOf('=')+1) + '&ax=1&ts=911134539');
+						}
+						else
+						{
+						getContentOver(a.substring(0,a.indexOf('=')),a.substring(a.indexOf('=')+1) + '?ax=1&ts=911134539');
+						}
+					}
+				}
+				
+		} else {
+			// start page
+            
+		}
+	}
+	</script>
+	
+
+	<link rel="stylesheet" href="/css/jquery.smallipop.css" type="text/css" media="all" title="Screen">
+	<script type="text/javascript" src="/js/modernizr.js"></script>
+	<script type="text/javascript" src="/js/jquery.smallipop.js"></script>
+	<script>
+	jQuery(document).ready(function () {
+		$('.top_bubble').smallipop({
+			theme: 'black',
+			popupDistance: 0,
+			popupYOffset: -7,
+			popupOffset: 0,
+			popupDistance: 5,
+			popupAnimationSpeed: 0,
+			popupDelay: 500,
+			hideDelay: 0
+		});
+		$('.bot_bubble').smallipop({
+			theme: 'black',
+			preferredPosition: 'bottom',
+			popupDistance: 0,
+			popupYOffset: -7,
+			popupOffset: 0,
+			popupDistance: 5,
+			popupAnimationSpeed: 0,
+			popupDelay: 500,
+			hideDelay: 0
+		});
+		$('.right_bubble').smallipop({
+			preferredPosition: 'right',
+			theme: 'black',
+			popupDistance: 0,
+			popupOffset: 10,
+			popupAnimationSpeed: 0,
+			popupDelay: 500,
+			hideDelay: 0
+		});
+	});
+	</script>
+
+
+</head><body class="" id="menu_manage">
+
+
+    <div class="help-cont">
+        <a class="thickbox thickboxWhite" href="/help?embed=1&modal=true&TB_iframe=true&position=right&width=600"><span class="mdi mdi-help-circle"></span></a>
+    </div>
+
+
+	<!-- School custom code -->
+	
+	<!-- End school custom code -->
+
+<script src="/js/wz_tooltip.js?v="></script>
+
+<div id="header">
+    <div id="generic">Loading</div>
+    
+    <div id="topbar" class="btnWhiteBlack">
+    <div class="wrapper" style="text-align:center;">
+        <div class="left">
+            
+                    <a class="logo top_bubble" title="" href="/"><b><img src="/upload/rit/2017/image_upload_34747_rit_logo_612132249_crop.png" alt="RIT (Rochester Institute of Technology)"></b></a>
+                
+            <nav>
+                <ul class="nav">
+                    
+                    <li class="gr_dropdown active" style="border-right: 1px #fff solid;">
+                        <a title="" class="top_bubble"  onClick="javascript:loadMyGroups();toggle_ecg('gr_list');" href="javascript:void(0)">
+                            
+                                    <span><img src="/images/main/icons_topnav.png" width="407" height="75" alt=""></span>
+                                    <span class="rub_name">College Acti...</span>
+                                    
+                            <span class="arrow_down" ><img src="/images/main/arrow_bw.png" width="8" height="30" alt="Display menu"></span>
+                              
+                                </a>
+
+                        
+                        <div id="gr_list" class="gr_list" style="display:none">
+                            <div class="table">
+                                <b class="title mygr noarrow"><span></span>My Groups </b>
+                                <div class="cell ddbtn">
+                                    
+                                    
+                                    <a class="transi cga a_groups" href="/club_signup">Join Groups</a>
+                                </div>
+                            </div>
+                            <form action="javascript:submitSearch(document.getElementById('searchlist_groups_input').value + '&type=groups');" method="post" class="cg_form">
+                                
+                                <span style="position:absolute; background: url(/images/main/icons_topnav.png) no-repeat -145px -57px; width: 18px; height: 18px; left: 16px; top: 17px; opacity: .8"></span>
+                                <input id="searchlist_groups_input" onKeyUp="searchList('myGroups', 'groupName', this.value, buildMyGroups, 'mn_my_groups', noResultAddGroup, '/mobile_ws/v17/mobile_groups?mode=web&search=' + this.value, 'groups');" type="text" placeholder="Search groups" title="Search groups" autocomplete="off" style="padding-left: 30px">
+                                
+                            </form>
+                            <div class="scroll_wrapper">
+                                
+
+                                <table id="groups_results">
+                                    
+                                    <span id="writeGroupLoading"><p id="Loadinggroups" class="loader" style="color:#bbb;font-size:16px;text-align:center; margin-top: 10px;"><img src="/images/loader-big.gif"/><br/>Loading groups</p></span>
+
+                                    
+                                    <tbody id="mn_my_groups"></tbody>
+
+                                    <script type="text/javascript">
+                                        var myGroups;
+
+                                        function buildMyGroups(data) {
+                                            //We hide the loading icon
+                                            $('#writeGroupLoading').hide();
+
+                                            //We append content
+                                            $('#mn_my_groups').append('<tr><td class="fav"><span>' + data.favoriteLink + '</span></td><td class="name"' + ((data.isOfficer == 1) ? '' : ' colspan="2"') + '><a onclick="cmsg(\'Loading group page...\', 10, 0);" href="' + data.groupDropdownLink + '"><img class="square" src="' + data.logoUrl + '"/>' + ((data.groupName.indexOf('[UNPUBLISHED]') > -1) ? '<img alt="Unpublished" class="groupTag" src="/images/unpublished-tag.png">' : '') + ((data.groupName.indexOf('[ADMIN]') > -1) ? '<img alt="Admin" class="groupTag" src="/images/admin-tag.png"/>' : '') + '<span>' + truncateText(data.groupName, 50).replace('[UNPUBLISHED]', '').replace('[ADMIN]', '') + '</span></a></td>' + ((data.isOfficer == 1) ? '<td class="grmn"><a title="Manage" onclick="cmsg(\'Switching group...\', 10, 0);" href="/officer_login_redirect?club_id=' + data.clubId + '"><img src="/images/main/icon_manage.png" width="80" height="20" alt="Manage"></a>' : '') + '</td></tr>');
+                                        }
+
+                                        /*function refreshListGroups(){
+                                            $('#mn_my_groups').html('');
+                                            setTimeout('loadMyGroups()', 500);
+                                        }*/
+
+                                        function loadMyGroups() {
+                                            $('#mn_my_groups').html('');
+                                            $('#writeGroupLoading').show();
+                                            getDataJSON('/mobile_ws/v17/mobile_groups?mode=web', 'myGroups', 'groups', buildMyGroups, noResultNoMembership);
+                                        }
+
+                                        function loadAllMyGroups() {
+                                            $('#mn_my_groups').html('');
+                                            $('#writeGroupLoading').show();
+                                            getDataJSON('/mobile_ws/v17/mobile_groups?mode=web&limit=2000', 'myGroups', 'groups', buildMyGroups, noResultNoMembership);
+                                        }
+
+                                        function noResultAddGroup() {
+                                            $('#writeGroupLoading').hide();
+                                            $('#mn_my_groups').html('<tr class="nohover"><td><img src="/images/add-group.png"></td><td><p>No group found. <br/><br/><a href="/club_init" style="' + (($('#searchlist_groups_input').val().length > 8) ? 'line-height:20px;text-align:left;' : '') + '">Create a new group</a></p></td></tr>');
+                                        }
+
+                                        function noResultNoMembership() {
+                                            $('#writeGroupLoading').hide();
+                                            $('#mn_my_groups').html('<tr class="nohover"><td><img src="/images/add-group.png"></td><td><div>No group found. <br/><br/><a href="/club_signup">Join groups</a></div></td></tr>');
+                                        }
+                                    </script>
+                                    
+                                </table>
+
+                                
+                            </div>
+
+                            
+                        </div>
+                        
+                    </li>
+                    
+                        <li class="hide myaccount">
+                            <a href="/student_profile" title="My profile">
+                                <span><img src="/images/main/icons_topnav.png" width="407" height="75" alt=""></span>
+                                <span class="rub_name">My Account</span>
+                            </a>
+                            <ul class="subMenu">
+                                
+                                    <li class="sm_profile"><a href="/student_entry?uid=0b809e74-8e76-11e7-90ac-0a25fd5e4565&_s=drPTCHJdkOYxXnPltgc2mI7zDePkrh50tcxAk2h8pgk%3d"><span></span>Edit Profile</a></li>
+                                
+                                <li class="sm_notifications"><a href="/student_manage_notifications"><span></span>Notification Settings</a></li>
+                                <li class="sm_privacy"><a href="/student_privacy"><span></span>Privacy Settings</a></li>
+                                <li class="sm_password"><a href="/student_password"><span></span>Edit Password</a></li>
+                                
+                                <li class="sm_todo"><a href="/checklists?mode=student"><span></span>Checklists</a></li>
+                                
+                                    <li class="sm_resume"><a href="/student_profile_resume?uid=0b809e74-8e76-11e7-90ac-0a25fd5e4565"><span></span>My Resume</a></li>
+                                
+                                <li class="sm_payments"><a href="/student_payments"><span></span>My Payments</a></li>
+                                <li class="sm_forms"><a href="/student_forms"><span></span>My Forms</a></li>
+                                <li class="sm_email_archives"><a href="/student_emails"><span></span>My Inbox</a></li>
+                                <li class="sm_past"><a href="/meetings"><span></span>My Meeting Schedulers</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="hide sm_logout"><a href="/logout"><span></span>Logout</a></li>
+
+                        
+                </ul>
+            </nav>
+        </div>
+        <div style="display: inline-block; vertical-align:middle;">
+            <nav>
+                <ul class="nav">
+            
+                    <li class=""><a title="" onClick="$(this).smallipop('destroy');" href="/student_index" class="home top_bubble"><span></span>
+                    <span class="rub_name">Home</span></a></li>
+                
+                    <li class=""><a title="" href="/feeds" class="home top_bubble"><span></span>
+                    <span class="rub_name">Feeds</span></a></li>
+                
+                    <li class="events_dropdown icon_only">
+                        
+                        <a class="top_bubble" title="" href="/events">
+                                <span style="border:0px"></span>
+                                
+                                    <span class="notif_counter">4283</span>
+                                
+                                <span class="rub_name" style="margin-right:14px">Events</span>
+                        </a>
+                  </li>
+                    
+                        <li class="ico_directory"><a class="top_bubble" href="/people" title=""><span></span><span class="rub_name"></span>Directory</a></li>
+                        
+                    <li class="job_dropdown">
+                        <a class="top_bubble" href="/job_postings" title=""><span></span><span class="rub_name">Jobs</span></a>
+                    </li>
+                    
+
+                </ul>
+            </nav>
+        </div>
+        <div class="right">
+            
+            <div class="mob_menu">
+            <a href="#"><img src="images/ico/icon_mobilenav.png" width="31" height="28" alt="Navigation"></a>
+            <ul class="nav">
+                    
+                    </li>
+                
+                <li class="dd_notif counter">
+                    <a title="Notifications" onClick="getContentNotif('dd_notif_content', '/student_history?ax=1');$('#notif_counter').hide();$('.dd_notif').removeClass('counter');" class="top_bubble notif_dropdown_click" href="javascript:void(0);">
+                    <span style="width:auto"><span><img src="/images/main/icons_topnav.png" width="407" height="75" alt="Notifications"></span>
+                    
+                    <span id="notif_counter">16</span>
+                    
+                    </span> </a>
+                    <div class="subMenu">
+                        <div style="line-height:20px;font-size:1.2em;border-bottom:1px #ccc solid;padding:10px;"><strong>Notifications</strong><span style="float:right"><a href="javascript:void(0)" onClick="javascript:if(confirm('Are you sure you want to delete all your notifications?')) {deleteContent('all_notifications', 'La1+lA+PoCz1MXtg6CMCkg==-F2Usa2Qq3rxGsv/abksKsKoKeEdCh/H8+22Y7paCBm4=', '0b809e74-8e76-11e7-90ac-0a25fd5e4565', 'drPTCHJdkOYxXnPltgc2mI7zDePkrh50tcxAk2h8pgk=');}">Clear All</a> | <a href="/student_manage_notifications">Settings</a></span></div>
+                        <div id="dd_notif_content" class="scroll_wrapper" style="max-height:500px;min-height:200px"> <p id="Loading" class="loader" style="color:#bbb;font-size:16px;text-align:center; margin-top: 10px;"><img src="/images/loader-big.gif"/><br/>Loading</p> </div>
+                    </div>
+                </li>
+                
+                <li class="dd_account">
+                    <a title="Display account menu" onClick="toggle_ecg('dd_myaccount')" class="" href="javascript:void(0);">
+                        <img src="/upload/rit/2017/s1_image_upload_571968_IMG_0696_10393433_crop.jpg" style="width:25px; height:25px; opacity:1; border:1px solid lightgray;" width="407" height="75" alt="">
+                        <span class="arrow_down"><img src="/images/main/arrow_bw.png" width="8" height="30" alt="Display account menu"> </span>
+                    </a>
+                    <div class="subMenu" id="dd_myaccount" style="display:none;overflow-y: auto;max-height: 80vh;">
+                        <b><a href="/student_profile" title="My profile">
+                            <span><img id="profile_photo_wrapper" src="/upload/rit/2017/s1_image_upload_571968_IMG_0696_10393433_crop.jpg" width="37" height="37" alt=""></span>
+                            <span>Nicole Thurgood</span>
+							<h6 style="color:#333;margin-top:-10px;margin-left: 56px; margin-bottom:-1px;">View Profile</h6>
+                        </a></b>
+						
+                        <ul>
+                            
+                                <li class="sm_profile"><a href="/student_entry?uid=0b809e74-8e76-11e7-90ac-0a25fd5e4565&_s=drPTCHJdkOYxXnPltgc2mI7zDePkrh50tcxAk2h8pgk%3d"><span></span>Edit Profile</a></li>
+                            
+                            <li class="sm_notifications"><a href="/student_manage_notifications"><span></span>Notification Settings</a></li>
+                            <li class="sm_privacy"><a href="/student_privacy"><span></span>Privacy Settings</a></li>
+                            <li class="sm_password"><a href="/student_password"><span></span>Edit Password</a></li>
+                            
+                                <li class="sm_todo"><a href="/checklists?mode=student"><span></span>My Checklists</a></li>
+                            
+                                <li class="sm_resume"><a href="/student_profile_resume?uid=0b809e74-8e76-11e7-90ac-0a25fd5e4565"><span></span>My Resume</a></li>
+                            
+                            <li class="sm_payments"><a href="/student_payments"><span></span>My Payments</a></li>
+                            
+                                <li class="sm_forms"><a href="/student_forms"><span></span>My Forms</a></li>
+                                <li class="sm_email_archives"><a href="/student_emails"><span></span>My Inbox</a></li>
+                                <li class="sm_past"><a href="/meetings"><span></span>My Meeting Schedulers</a></li>
+                                
+                            <li class="sm_logout"><a href="/logout"><span></span>Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="manage_nav"> <script>var tag_id_array = [];var id_array = [];var type_array = [];$(document).ready(function() {searchAutocomplete("officersPopup", 16231, 'officers');});</script><div style="display:none;top:80px;" id="officers_lightbox_16231" class="lightbox_panel wrap"><div class="wrapInner"><div class="inner"><div class="title"><h2>Add Officers<a class="close_button" onclick="hide_lightbox('16231', 'officers');" ></a></h2></div><div class="innerWrap"><label class="label_trang">Type the name or email address of the officers you wish to add</label><input placeholder="Start typing and wait for suggestions..." id="officersPopup" type="text" class="nameInput"><br><a style="text-align:right" href="/wiz_members">I can't find the person I am looking for.</a></div><div style="overflow:auto; height:200px"><div id="officers_result_list"  style="padding:0px 12px;display:none;"><label class="label_trang lblInfo"><b>People Added so far:</b></label><ul id="added_officers" class="peopleList"></ul></div></div><div class="action" style="background:#eee;padding:7px"><a onClick="cancel_searchpeople('officers', id_array, tag_id_array);hide_lightbox('16231', 'officers');" href="#" title="Cancel" class="btnCancel"></a><a type="submit" class="btnConfirm" onClick="send_notifications(id_array, type_array);hide_lightbox('16231', 'officers');window.location.href='/officers';" ></a></div></div></div></div><div id="lightbox_16231" class="lightbox"></div> <script>var tag_id_array = [];var id_array = [];var type_array = [];$(document).ready(function() {searchAutocomplete("membersPopup", 16231, 'members');});</script><div style="display:none;top:80px;" id="members_lightbox_16231" class="lightbox_panel wrap"><div class="wrapInner"><div class="inner"><div class="title"><h2>Add Members<a class="close_button" onclick="hide_lightbox('16231', 'members');" ></a></h2></div><div class="innerWrap"><label class="label_trang">Type the name or email address of the members you wish to add</label><input placeholder="Start typing and wait for suggestions..." id="membersPopup" type="text" class="nameInput"><br><a style="text-align:right" href="/wiz_members">I can't find the person I am looking for.</a></div><div style="overflow:auto; height:200px"><div id="members_result_list"  style="padding:0px 12px;display:none;"><label class="label_trang lblInfo"><b>People Added so far:</b></label><ul id="added_members" class="peopleList"></ul></div></div><div class="action" style="background:#eee;padding:7px"><a onClick="cancel_searchpeople('members', id_array, tag_id_array);hide_lightbox('16231', 'members');" href="#" title="Cancel" class="btnCancel"></a><a type="submit" class="btnConfirm" onClick="send_notifications(id_array, type_array);hide_lightbox('16231', 'members');window.location.href='/members';" ></a></div></div></div></div><div id="lightbox_16231" class="lightbox"></div>
+    
+    <div class="wrapper">
+        <div class="sf-menu">
+            
+                <a title="College Activities Board" style="" class="top_bubble mn_group" href="/student_community?club_id=16231">
+                    <img style="vertical-align:middle;margin:0 8px" src="/upload/rit/2017/s2_image_upload_549386_CAB_logo_822135535_crop.jpg" width="35px" height="35px">
+                    <span style="display: inline-block; vertical-align: middle; max-width:100px; text-transform: uppercase; white-space:normal"></span>
+                </a>
+            
+            <nav>
+                <ul>
+                <li class="mn_manage active"> <a onClick="" href="javascript:void(0);"><span></span>Dashboard</a>
+                    <ul class="subMenu">
+                        <li class="sm_hide sm_activity active"><a href="index"><span></span>Overview</a></li><li class="sm_officers"><a href="/officers"><span></span>Officers<span class="cg_num cg_grey">27</span></a></li><li class="sm_settings"><a href="club_entry?uid=523cae77-6659-11e7-90ac-0a25fd5e4565&_s=fetkpRxVFOyT2VhXakDU8bMkl9WY1qu6CymhxGju8gk%3d"><span></span>Settings</a></li><li class="sm_hide sm_tags"><a href="tags"><span></span>Tags</a></li><li class="sm_tags"><a href="/badges"><span></span>Badges</a></li><li class="sm_web_templates"><a href="/customizations"><span></span>Page Customizations</a></li><li class="sm_reports nobrd"><a href="reports"><span></span>Reports</a></li><li class="sm_add_new sm_add_message"><a class="background-cg--officer" href="javascript:void(0);" onclick="alert('Your officer permissions do not authorize you to add officers. Please contact support@campusgroups.com if you need more information.');"><span></span>Add officers</a></li>
+                    </ul>
+                </li>
+            
+            <li class="mn_members"> <a onClick="" href="javascript:void(0);"><span></span>Members</a>
+                <ul class="subMenu">
+                    <li class="sm_select_members"><a href="/members_list"><span></span>All Members</a></li><li class="sm_select_members_breakdown"><a href="/members_breakdown"><span></span>Members Breakdown</a></li><li class="sm_account_switch"><a href="/mentorships_list"><span></span>Connection Programs</a></li><li class="sm_import"><a href="/upload_members_form"><span></span>Upload</a></li><li class="sm_member_reports"><a class="thickbox thickboxWhite" href="/report?report_id=457&embed=1&modal=true&mode=set&height=500&width=800&TB_iframe=true"><span></span>Download</a></li><li class="sm_search"><a href="/search_members.aspx"><span></span>Search Members</a></li><li class="sm_member_profile_extension"><a href="/survey_builder?embed=1&survey_type=3002" onClick="javascript: if(confirm('The Profile Extension feature allows you to add additional fields to your member profiles.')) {return true;} else {return false;}"><span></span>Profile Extension</a></li><li class="sm_members_overview nobrd"><a href="/overview_members"><span></span>Stats</a></li><li class="sm_add_new sm_add_member"><a class="background-cg--default thickbox thickboxWhite" href="/add_members?popup=1&embed=1&modal=true&TB_iframe=true&height=600&width=900"><span></span>Add Member</a></li>
+                </ul>
+            </li>
+            
+                <li class="mn_emails"> <a onClick="" href="javascript:void(0);"><span></span>Emails</a>
+                    <ul class="subMenu">
+                        <li class="sm_sent"><a href="/emails"><span></span>Sent<span class="cg_num nb_emails">2</span></a></li><li class="sm_email_scheduled"><a href="/emails?show=scheduled"><span></span>Scheduled<span class="cg_num cg_grey">0</span></a></li><li class="sm_email_drafts"><a href="/emails?show=draft"><span></span>Drafts<span class="cg_num cg_grey">6</span></a></li><li class="sm_mailing_lists"><a href="/mailing_lists"><span></span>Mailing Lists<span class="cg_num cg_grey">0</span></a></li><li class="sm_hide sm_delivery_status"><a href="/news"><span></span>News</a></li><li class="sm_email_templates"><a href="/email_templates"><span></span>Templates<span class="cg_num cg_grey">9</span></a></li><li class="sm_emails_overview nobrd"><a href="/overview_emails"><span></span>Stats</a></li><li class="sm_emails_overview nobrd"><a href="/email_opens"><span></span>Emails tracking</a></li><li class="sm_hide sm_delivery_status"><a href="/email_delivery"><span></span>Delivery Status</a></li><li class="sm_add_new sm_add_email"><a class="background-cg--email thickbox thickboxWhite" href="div_compose?embed=1&mode=set&modal=true&width=700&height=500&TB_iframe=true"><span></span>Compose Email</a></li>
+                    </ul>
+                </li>
+            
+            <li class="mn_events"> <a onClick="" href="javascript:void(0);"><span></span>Events<span class="cg_num nb_events">13</span></a>
+                <ul class="subMenu">
+                    <li class="sm_upcoming"><a href="events_list"><span></span>Upcoming<span class="cg_num nb_events">13</span></a></li><li class="sm_past"><a href="events_list?show=past"><span></span>Past Events<span class="cg_num cg_grey">146</span></a></li><li class="sm_event_drafts"><a href="events_list?show=drafts"><span></span>Drafts<span class="cg_num cg_grey">1</span></a></li><li class="sm_events_delete"><a href="events_list?show=deleted"><span></span>Deleted<span class="cg_num cg_grey">17</span></a></li><li class="sm_hide mn_events"><a href="calendar?club_id=16231"><span style='background-position: 0 -721px'></span>Calendar</a></li><li class="sm_hide sm_event_reports smthickbox"><a class="thickbox thickboxWhite" href="admin_window.aspx?type=event&option=1&attendance=true&embed=1&modal=true&mode=set&height=300&width=350&TB_iframe=true"><span></span>Attendance Report</a></li><li class="sm_events_overview nobrd"><a href="overview_events"><span></span>Stats</a></li><li class="sm_add_new sm_add_event"><a class="background-cg--event" href="event_form2"><span></span>Create Event</a></li>
+                </ul>
+            </li>
+            
+                <li class="mn_forms"> <a onClick="" href="javascript:void(0);"><span></span>Surveys</a>
+                    <ul class="subMenu">
+                        <li class="sm_all_forms"><a href="/surveys"><span></span>View Surveys & Forms</a></li><li class="sm_forms_overview"><a href="overview_forms"><span></span>Stats</a></li><li class="sm_inventory"><a href="equipments"><span></span>Inventory</a></li><li class="sm_checklist"><a href="checklists?mode=group"><span></span>Checklists</a></li><li class="sm_jobpostings"><a href="job_postings_manage"><span></span>Jobs</a></li><li class="sm_workflowtemplates"><a href="workflow_templates"><span></span>Workflow</a></li><li class="sm_add_new sm_add_form"><a class="background-cg--survey" href="/create_survey"><span></span>Create</a></li>
+                    </ul>
+                </li>
+            
+                <li class="mn_website"> <a onClick="" href="javascript:void(0);"><span></span>Website</a>
+                    <ul class="subMenu">
+                        <li class="sm_open_website"><a href="/CAB/"><span></span>Open Website</a></li><li class="sm_web_pages"><a href="/web_site"><span></span>Edit Web Pages</a></li><li class="sm_web_widget"><a href="/web_site#content_widgets"><span></span>Widgets</a></li><li class="sm_blog"><a href="blog_posts"><span></span>Blog</a></li><li class="sm_useful_links"><a href="bookmarks"><span></span>Useful Links</a></li><li class="sm_discussion_board"><a href="/forum_sections_manage"><span></span>Forum</a></li><li class="sm_web_videos"><a href="videos"><span></span>Videos</a></li><li class="sm_website_overview"><a href="overview_website"><span></span>Stats</a></li>
+                    </ul>
+                </li>
+            
+                    <li class="mn_money"> <a onClick="" href="javascript:void(0);"><span></span>Money</a>
+                        <ul class="subMenu">
+                            <li class="sm_pnl"><a href="money_summary"><span></span>Accounting Book</a></li><li class="sm_credits"><a href="money"><span></span>Online Revenues</a></li><li class="sm_budgeting"><a href="budget_list"><span></span>Budgeting</a></li><li class="sm_stores"><a href="stores"><span></span>Stores</a></li><li class="sm_download"><a class="thickbox thickboxWhite" href="/report?report_id=445&param1=16231&embed=1&modal=true&mode=set&height=500&width=800&TB_iframe=true"><span></span>Download</a></li><li class="sm_money_overview"><a href="overview_money"><span></span>Stats</a></li>
+                        </ul>
+                    </li>
+                
+                <li class="mn_media"> <a onClick="" href="/files?view=files"><span></span>Files</a>
+                    
+                </li>
+            
+            </ul>
+            </nav>
+        </div>
+        <form action="javascript:submitSearch(document.getElementById('txtKeyword').value);" method="post" class="cg_form">
+            <div class="innerSearch"> <a href="javascript:void(0);" class="glass" style="display:none"></a> <span class="searchbox">
+                <input style="height:0px" type="text" class="txtKeyword" id="txtKeyword" placeholder="Find people, events...">
+                <a class="close" style="height:0px" onClick="toggleSearchBox(0)" title="Close search" href="javascript:void(0);"></a> </span>
+                <div id="cg_settingPopup" class="cg_settingPopup" style="display: none; ">
+                    <input id="chkSearch" type="checkbox" class="cg_checkbox" name="club_search">
+                    <label>Search <a href="/index">College Activit...</a> only</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    //jQuery(document).ready(function(){
+        jQuery('.sf-menu').superfish({
+            delay:       100,                            // one second delay on mouseout
+            animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation
+            speed:       'fast',                          // faster animation speed
+            autoArrows: false,                         // disable generation of arrow mark-up
+            showDelay: 0
+        });
+    //});
+</script>
+
+
+
+</div>
+
+    </div>
+
+<div id="content" style="" class="">
+<div class="wrapper">
+<div id="main">
+
+
+<!--"leftcol" -->
+
+<div id="leftcolfix"></div>
+<div id="leftcol">
+    
+    <ul class="officersdashboard  subMenu">
+        <li class="sm_hide sm_activity active"><a href="index"><span></span>Overview</a></li><li class="sm_officers"><a href="/officers"><span></span>Officers<span class="cg_num cg_grey">27</span></a></li><li class="sm_settings"><a href="club_entry?uid=523cae77-6659-11e7-90ac-0a25fd5e4565&_s=fetkpRxVFOyT2VhXakDU8bMkl9WY1qu6CymhxGju8gk%3d"><span></span>Settings</a></li><li class="sm_hide sm_tags"><a href="tags"><span></span>Tags</a></li><li class="sm_tags"><a href="/badges"><span></span>Badges</a></li><li class="sm_web_templates"><a href="/customizations"><span></span>Page Customizations</a></li><li class="sm_reports nobrd"><a href="reports"><span></span>Reports</a></li><li class="sm_add_new sm_add_message"><a class="background-cg--officer" href="javascript:void(0);" onclick="alert('Your officer permissions do not authorize you to add officers. Please contact support@campusgroups.com if you need more information.');"><span></span>Add officers</a></li>
+    </ul>
+</div>
+
+
+<!--"maincol" -->
+<div id="maincol">
+
+
+<script type="text/javascript">
+
+</script>
+
+<script src="/js/highcharts.js"></script>
+
+
+<div class="cgw w_group_activity" style="margin-right:5px">
+    <div class="w_actions top_actions">
+        <div class="right">
+            <input type="text" id="txtGroupSearch" placeholder="Search your group" autocomplete="off" style="" />
+            <a title="Search" class="cgb b_search"><span></span></a>
+        </div>
+        <div class="ib">
+            <a class="cga thickbox thickboxWhite" href="/add_members?popup=1&embed=1&modal=true&TB_iframe=true&height=600&width=900">Add Members</a>
+            
+                <a class="thickbox thickboxWhite cga a_emails" href="div_compose?embed=1&mode=set&modal=true&TB_iframe=true&width=700&height=500">Compose Email</a>
+            
+   	            <a class="cga a_events" href="/event_form2">Create Event</a>
+            
+        </div>
+    </div>
+</div>
+
+<div class="medium" style="width:400px;">
+    <div class="cgw w_group_activity">
+        <div class="w_title"><span class="w_lft"></span><span class="ttl"><span></span>Today</span></div>
+        <div class="w_content" style="padding:0px;margin:0px">
+        	
+            <div class="w_content my_officers" style="padding:0px; margin:0px;">
+                <div id="ajax_club_news">
+                    <div style="color:#bbb;font-size:14px;text-align:center"><img src="/images/loader-big.gif"/><br/>Loading Activity</div>
+                    <script type="text/javascript">
+                        getContent('ajax_club_news', 'ajax_club_news');
+                    </script>
+                </div>
+                <div style="margin:10px 0px -1px 0px;padding:15px;"> 
+                    <span class="w_left">See more activity:
+                        <a class="" href="club_news.aspx?period=week">2 weeks</a>
+                        &middot;
+                        <a class="" href="club_news.aspx?period=month">1 month</a>
+                        &middot;
+                        <a  class="" onclick="if (confirm('This is going to be a long list. Please confirm?')) {return true;} else {return false};" href="club_news.aspx?period=year">1 year</a><!--&nbsp;<a href="club_news.aspx?period=week"></a>-->
+                    </span><br />
+
+                </div>
+            </div>
+        </div>
+    </div>     
+    
+      
+
+
+</div>       
+<div class="medium" style="width:400px;margin-left:16px">        
+    <div class="cgw w_groups_doc">
+        <div class="w_title"><span class="w_lft"></span><span class="ttl"><span></span>Year End Report</span></div>
+        <div class="w_content">
+            <a target="_blank" href="/print_year_end_report?club_id=16231&school=rit&save_as_pdf=1" class="cga a_groups">Year End Report</a>
+            <span style="margin-left:20px"><a class="thickbox thickboxWhite" href="/year_end_report_entry?uid=523cae77-6659-11e7-90ac-0a25fd5e4565&_s=fetkpRxVFOyT2VhXakDU8bMkl9WY1qu6CymhxGju8gk%3d&close_div=1&embed=1&modal=true&height=500&width=800&TB_iframe=true">Edit Missions & Highlights of the year</a></span>
+        </div>
+    </div>
+</div>
+
+<div class="medium" style="width:400px;margin-left:16px">        
+    <div class="cgw w_groups_overview overview">
+        <div class="w_title"><span class="w_lft"></span><span class="ttl"><span></span>Overview</span></span></div>
+        <div class="w_content">
+				
+                <div class="ovHeader">
+                    <select  onChange="javascript:window.location.href = 'index?p=' + this.options[this.selectedIndex].value">
+	<option value="Today" >Today</options>
+	<option value="Yesterday" >Yesterday</options>
+	<option value="This_Week" >This Week</options>
+	<option value="This_Month" >This Month</options>
+	<option value="This_Semester" >This Semester</options>
+	<option value="This_Year" selected>This Year</options>
+	<option value="Last_Week" >Last Week</options>
+	<option value="Last_Month" >Last Month</options>
+	<option value="Last_Semester" >Last Semester</options>
+	<option value="Last_12_Months" >Last 12 Months</options>
+	<option value="Last_24_Months" >Last 24 Months</options>
+	<option value="Last_Year" >Last Year</options>
+	<option value="All_Time" >All Time</options>
+	<!--<option value="Custom" onclick="javascript:window.open('admin_stats_dates.aspx');" >Custom</options>-->
+</select>
+<p class="ovTimeFrame">1 Jan
+ - 11 Sep</p>
+                </div>
+                <ul class="ovBlueTxt">
+                    <li><span class="ovNumber">2</span> Emails</li><li><span class="ovNumber">53</span> New Members</li><li><span class="ovNumber">115</span> Events</li><li><span class="ovNumber">2163</span> Website Page Viewed</li></li>
+                </ul>
+                
+                <div class="ovHeader" style="font-size:18px !important;">Recently Joined</div>
+                <ul class="ovBlueTxt ovList">
+                     
+		<div style="height:60px;">
+			
+				<a href="search_members.aspx?update=2&member_uid=77f5f2e7-b188-11e8-b516-0ac8160dcdf6">
+			
+			<span style="float:left">
+				<img height="50" width="50" onMouseOver="javascript:Tip('<img style=\'margin:5px;\' src=\'/images/ico/male_user_small.png\' />')" style="margin:0px 0px 5px 0px;float:left" src="/images/ico/male_user_small.png" width="50" />
+				<span style="float:right;margin-left:15px;width:150px;" >
+					Tharindu Cyril Weerasooriya
+					<div style="margin-bottom:10px;font-size:12px;color: #666666;">
+						Student 
+					</div>
+				</span>
+			</span>
+			</a>
+			<span style="font-size:13px; float:right;color: #666666;">5 Sep</span>
+		</div>
+	
+		<div style="height:60px;">
+			
+				<a href="search_members.aspx?update=2&member_uid=897a7dae-afe2-11e8-b516-0ac8160dcdf6">
+			
+			<span style="float:left">
+				<img height="50" width="50" onMouseOver="javascript:Tip('<img style=\'margin:5px;\' src=\'/images/ico/male_user_small.png\' />')" style="margin:0px 0px 5px 0px;float:left" src="/images/ico/male_user_small.png" width="50" />
+				<span style="float:right;margin-left:15px;width:150px;" >
+					Donna Casey
+					<div style="margin-bottom:10px;font-size:12px;color: #666666;">
+						Student 
+					</div>
+				</span>
+			</span>
+			</a>
+			<span style="font-size:13px; float:right;color: #666666;">3 Sep</span>
+		</div>
+	
+		<div style="height:60px;">
+			
+				<a href="search_members.aspx?update=2&member_uid=b8af9ef8-afd9-11e8-b516-0ac8160dcdf6">
+			
+			<span style="float:left">
+				<img height="50" width="50" onMouseOver="javascript:Tip('<img style=\'margin:5px;\' src=\'/images/ico/male_user_small.png\' />')" style="margin:0px 0px 5px 0px;float:left" src="/images/ico/male_user_small.png" width="50" />
+				<span style="float:right;margin-left:15px;width:150px;" >
+					Vaishnavi Mande
+					<div style="margin-bottom:10px;font-size:12px;color: #666666;">
+						Student 
+					</div>
+				</span>
+			</span>
+			</a>
+			<span style="font-size:13px; float:right;color: #666666;">3 Sep</span>
+		</div>
+	
+		<div style="height:60px;">
+			
+				<a href="search_members.aspx?update=2&member_uid=f04709ac-ae59-11e8-b516-0ac8160dcdf6">
+			
+			<span style="float:left">
+				<img height="50" width="50" onMouseOver="javascript:Tip('<img style=\'margin:5px;\' src=\'/images/ico/male_user_small.png\' />')" style="margin:0px 0px 5px 0px;float:left" src="/images/ico/male_user_small.png" width="50" />
+				<span style="float:right;margin-left:15px;width:150px;" >
+					Shaelyn Shadwell
+					<div style="margin-bottom:10px;font-size:12px;color: #666666;">
+						Student 
+					</div>
+				</span>
+			</span>
+			</a>
+			<span style="font-size:13px; float:right;color: #666666;">1 Sep</span>
+		</div>
+	
+		<div style="height:60px;">
+			
+				<a href="search_members.aspx?update=2&member_uid=4e718a43-acb8-11e8-b516-0ac8160dcdf6">
+			
+			<span style="float:left">
+				<img height="50" width="50" onMouseOver="javascript:Tip('<img style=\'margin:5px;\' src=\'/upload/rit/2018/small_image_642278_upload_723183820_723183820.jpg\' />')" style="margin:0px 0px 5px 0px;float:left" src="/upload/rit/2018/s1_image_642278_upload_723183820_723183820.jpg" width="50" />
+				<span style="float:right;margin-left:15px;width:150px;" >
+					Kim Ngo
+					<div style="margin-bottom:10px;font-size:12px;color: #666666;">
+						Student 
+					</div>
+				</span>
+			</span>
+			</a>
+			<span style="font-size:13px; float:right;color: #666666;">30 Aug</span>
+		</div>
+	
+                </ul>
+                
+
+                <div class="ovHeader" style="font-size:18px !important;">Members Types</div>
+                  
+                <style>
+                    #chart0 {
+                        border: 0px!important;
+                    }
+                </style>
+             
+            <script type="text/javascript">
+                    
+                   (function($){ // encapsulate jQuery
+    $(function () {
+            $('#chart0').highcharts({
+           colors: ['#1B53A6', '#3176DD', '#679AE7', '#A0C0EF', '#CCDDF7', '#E9F0FC', '#FDECE1', '#FFF263'],
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: '',
+                    y: 0,
+                },
+                xAxis: {
+                    categories: [],
+                    minTickInterval: 1,
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        rotation: -45,
+                        y: 25,
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    gridLineColor: '#E4E4E4',
+                    title: {
+                        text: 'Count',
+                        align: 'high'
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    valueSuffix: ' Count',
+                    formatter: function() {
+                       return this.point.name + ' (' + Math.round(this.percentage*100)/100 + '%)';
+                    }
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true
+                        }
+                    },
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false,
+                            color: '#000000',
+                            connectorColor: '#000000',
+                            formatter: function() {
+                               return '<b>'+ this.point.name +'</b>: '+ Math.round(this.percentage*100)/100 +' %';
+                            }
+                        },
+                        showInLegend: true
+                    },
+                    area: {
+                        fillOpacity: 0.2,
+                        marker: {
+                            enabled: false,
+                            symbol: 'circle',
+                            radius:2,
+                            states: {
+                               hover: {
+                                   enabled:true
+                               }
+                            }
+                        }
+                    },
+                    column: {
+                        stacking: '',
+                        dataLabels: {
+                            enabled: false,
+                            formatter: function() {
+                               if (this.y != 0) {
+                                   return this.y;
+                               } else {
+                                   return '';
+                               }
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labelFormatter: function() {
+                       return this.name + ' - ' + this.y;
+                    },
+                    itemStyle: {
+                       fontSize: '13px'
+                    },
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    name: '',
+                    data: [['Student',48 ],['Student Empl...',26 ],['Staff',4 ],],
+                    marker: {
+                       radius: 3
+                   },
+                }]
+           });
+        });
+    })(jQuery);
+
+                $(document).ready(function () {
+                    var club_id = "16231";
+                    $("#txtGroupSearch").keypress(function (event) {
+                        if (event.keyCode == 13) {
+                            submitSearch($("#txtGroupSearch").val() + "&type=groups", club_id);
+                        }
+                    });
+
+                    $(".b_search").click(function () {
+                        submitSearch($("#txtGroupSearch").val() + "&type=groups", club_id);
+                    });
+                });
+
+                    </script>
+                <div class="flyer" style="margin:5px;width:355px;height:300px" id="chart0"></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+</script>
+<!-- End Google Analytics -->
+
+<script type="text/javascript" src="/js/jquery/jquery.autocomplete.js"></script>
+<script src="/js/jquery.slides.min.js?v=" type="text/javascript"></script>
+<script src="/js/jquery.dd.js?v=" type="text/javascript"></script>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+</div>
+
+</body>
+</html>
+
