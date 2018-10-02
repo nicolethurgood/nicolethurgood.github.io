@@ -185,10 +185,11 @@ a {
 
 .port-btn{
   color: #407b80;
-  border: 1px solid #407b80;
+  
   background-color: transparent; }
   .btn-default:focus, .btn-default:hover {
     color: black;
+    border: 1px solid #407b80;
     outline: none;
     background-color: #407b80; }
 }
