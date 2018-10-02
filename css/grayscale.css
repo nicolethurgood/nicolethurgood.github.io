@@ -187,7 +187,7 @@ a {
   color: #407b80;
   
   background-color: transparent; }
-  .btn-default:focus, .btn-default:hover {
+  .port-btn:focus, .port-btn:hover {
     color: black;
     border: 1px solid #407b80;
     outline: none;
