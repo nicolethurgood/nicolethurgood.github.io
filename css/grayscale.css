@@ -183,6 +183,16 @@ a {
     outline: none;
     background-color: #407b80; }
 
+.port-btn{
+  color: #407b80;
+  border: 1px solid #407b80;
+  background-color: transparent; }
+  .btn-default:focus, .btn-default:hover {
+    color: black;
+    outline: none;
+    background-color: #407b80; }
+}
+
 ul.banner-social-buttons {
   margin-top: 0; }
   @media (max-width: 1199px) {
